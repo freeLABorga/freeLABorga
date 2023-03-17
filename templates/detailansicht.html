@@ -1,0 +1,116 @@
+{#
+    This file is part of freeLABorga.
+    Copyright (C) 2022-2023  Nico Hoffmann, Jan Ludwig, Philipp Pfeiffer 
+
+    freeLABorga is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License Version 3
+    as published by the Free Software Foundation on June 29, 2007.
+
+    freeLABorga is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with freeLABorga.  If not, see <http://www.gnu.org/licenses/>.
+#}
+
+{% extends "base.html" %}
+
+{% block head %}
+<link rel="stylesheet" href="css/detailansicht.css">
+<script language="javascript" type="module" src="js/detailansicht.js" async></script>
+<title>Detailansicht</title>
+{% endblock head %}
+
+{% block content %}
+<main>
+    <div class="content">
+        <div class="headlinebuttons">
+            <div class="headline">
+                <h1>Detailansicht</h1>
+            </div>
+            <div class="buttons">
+                <button id="btn-ausinv"></button>
+                <button id="btn-edit"><i class="fa-solid fa-pen-to-square"></i></button>
+                <button id="btn-delete"><i class="fa-solid fa-trash-can"></i></button>
+                <button id="btn-borrowOrReturn"></button>
+            </div>
+        </div>
+        <div class="row">
+        <div class="column">
+        <table id="main-table" class="main-table">
+            <tbody>
+                <tr>
+                    <td>Name</td>
+                    <td id="Textfeld_Name"></td>
+                </tr>
+                <tr>
+                    <td>Lagerort</td>
+                    <td id="Textfeld_Lagerort"></td>
+                </tr>
+                <tr>
+                    <td>Kategorien</td>
+                    <td id="Textfeld_Kategorien"></td>
+                </tr>
+                <tr>
+                    <td>ID</td>
+                    <td id="Textfeld_ID"></td>
+                </tr>
+                <tr>
+                    <td>Seriennummer</td>
+                    <td id="Textfeld_SN"></td>
+                </tr>
+                <tr>
+                    <td>Verfügbarkeit</td>
+                    <td id="Textfeld_Verfügbarkeit"></td>
+                </tr>
+                <tr>
+                    <td>Inventarisiert</td>
+                    <td id="Textfeld_Inventarisiert"></td>
+                </tr>
+                <tr>
+                    <td>Kaufpreis</td>
+                    <td id="Textfeld_Preis"></td>
+                </tr>
+                <tr>
+                    <td>Kaufdatum</td>
+                    <td id="Textfeld_Kaufdatum" data-type="date"></td>
+                </tr>
+                <tr>
+                    <td>Zustand</td>
+                    <td id="Textfeld_Zustand"></td>
+                </tr>
+            </tbody>
+        </table>
+        <table id="Zustandshistorie" class="Zustandshistorie">
+            <thead>
+                <th>Datum</th>
+                <th>Beschreibung</th>
+                <th>Behoben</th>
+                <th> </th>
+                <th><button id="btn-new"><i class="fa-solid fa-plus"></i></button></th>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+
+        </div>
+        <div class="column">
+        <table id="Ausleihhistorie" class="Ausleihhistorie">
+            <thead>
+                <th>Ausgeliehen von</th>
+                <th>Verleihdatum</th>
+                <th>gepl. Rückgabe</th>
+                <th>tats. Rückgabe</th>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+        </div>
+        </div>
+    </div>
+</main>
+{% endblock content %}

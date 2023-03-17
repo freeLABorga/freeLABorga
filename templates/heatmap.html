@@ -1,0 +1,85 @@
+{#
+    This file is part of freeLABorga.
+    Copyright (C) 2022-2023  Nico Hoffmann, Jan Ludwig, Philipp Pfeiffer 
+
+    freeLABorga is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License Version 3
+    as published by the Free Software Foundation on June 29, 2007.
+
+    freeLABorga is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with freeLABorga.  If not, see <http://www.gnu.org/licenses/>.
+#}
+
+{% extends "base.html" %}
+
+{% block head %}
+<link rel="stylesheet" href="css/heatmap.css">
+<script language="javascript" type="text/javascript" src="js/heatmap.js" async></script>
+<title>Heatmap</title>
+{% endblock head %}
+
+{% block content %}
+<main>
+    <div class="content">
+        <div class="headline">
+            <h1>Heatmap</h1>
+        </div>
+        <table id="table-heatmap" class="table-heatmap">
+            <thead class="heatmap-head">
+                <th>Jahr</th>
+                <th>Jan</th>
+                <th>Feb</th>
+                <th>Mar</th>
+                <th>Apr</th>
+                <th>May</th>
+                <th>Jun</th>
+                <th>Jul</th>
+                <th>Aug</th>
+                <th>Sep</th>
+                <th>Oct</th>
+                <th>Nov</th>
+                <th>Dec</th>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+
+        <p class="headingLegende"><b>Legende: </b></p>
+
+        <table class="legende">
+            <thead>
+                <th>Höhe der Investition x</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="row0"><b>x = 0€</b></td>
+                </tr>
+                <tr>
+                    <td class="row100"><b>x < 100€</b></td>
+                </tr>
+                <tr>
+                    <td class="row500"><b>x < 500€</b></td>
+                </tr>
+                <tr>
+                    <td class="row1000"><b>x < 1000€</b></td>
+                </tr>
+                <tr>
+                    <td class="row5000"><b>x < 5000€</b></td>
+                </tr>
+                <tr>
+                    <td class="row10000"><b>x < 10000€</b></td>
+                </tr>
+                <tr>
+                    <td class="row10000i"><b>x >= 10000€</b></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</main>
+{% endblock content %}

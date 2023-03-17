@@ -1,0 +1,69 @@
+{#
+    This file is part of freeLABorga.
+    Copyright (C) 2022-2023  Nico Hoffmann, Jan Ludwig, Philipp Pfeiffer 
+
+    freeLABorga is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License Version 3
+    as published by the Free Software Foundation on June 29, 2007.
+
+    freeLABorga is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with freeLABorga.  If not, see <http://www.gnu.org/licenses/>.
+#}
+
+{% extends "base.html" %}
+
+{% block head %}
+<link rel="stylesheet" href="css/admin.css">
+<script language="javascript" type="text/javascript" src="js/admin.js" async></script>
+<title>Admin-Bereich</title>
+{% endblock head %}
+
+{% block content %}
+<main>
+    <div class="content">
+        <div class="headline">
+            <h1>Admin-Bereich</h1>
+        </div>
+        <form action="">
+            <div class="admin-page">
+                <section class="imprint-section">
+                    <div class="section-header">
+                        <h3>Impressumsseite</h3>
+                        <label>
+                            HTML aktivieren
+                            <input type="checkbox" id="imprint-html-active">
+                        </label>
+                    </div>
+                    <textarea id="imprint-text"></textarea>
+                </section>
+                <section class="privacy-section">
+                    <div class="section-header">
+                        <h3>Datenschutzseite</h3>
+                        <label>
+                            HTML aktivieren
+                            <input type="checkbox" id="privacy-html-active">
+                        </label>
+                    </div>
+                    <textarea id="privacy-text"></textarea>
+                </section>
+                <div class="input-row">
+                    <label for="name">Maximale Anzahl von Einträgen pro Seite: </label>
+                    <input id="items-per-page" type="number" min="1">
+                </div>
+                <div class="input-row">
+                    <label for="name">Anonymisierung von Personen nach X Tagen: </label>
+                    <input id="anonymisation-days" type="number"  min="1">
+                </div>
+                <input id="save-admin-texts-button" type="button" value="Speichern">
+            </div>
+            <div class="success-message" id="result-message"></div>
+        </form>
+
+    </div>
+</main>
+{% endblock content %}

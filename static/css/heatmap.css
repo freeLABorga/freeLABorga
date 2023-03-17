@@ -1,0 +1,196 @@
+/**
+ * This file is part of freeLABorga.
+ * Copyright (C) 2022-2023  Nico Hoffmann, Jan Ludwig, Philipp Pfeiffer 
+ *
+ * freeLABorga is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License Version 3
+ * as published by the Free Software Foundation on June 29, 2007.
+ *
+ * freeLABorga is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with freeLABorga.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+.table-heatmap td{
+    width: 7.6% !important;
+}
+
+.legende {
+    width: 10em !important;
+}
+
+.headingLegende {
+    margin-top: 4em;
+}
+
+
+
+tbody:hover {
+    background-color: white;
+}
+
+.year:hover {
+    background-color: white;
+}
+
+.table-heatmap tr:hover {
+    background-color: white;
+}
+
+.legende tr:hover {
+    background-color: white;
+}
+
+tbody:hover {
+    background-color: white;
+}
+
+@media (prefers-color-scheme: light) {
+    .row0 {
+        background-color: #ffffff;
+    }
+
+    .row100 {
+        background-color: #ffe699;
+    }
+
+    .row500 {
+        background-color: #fff33b;
+    }
+
+    .row1000{
+        background-color: #fdc70c;
+    }
+
+    .row5000{
+        background-color: #f3903f;
+    }
+
+    .row10000{
+        background-color: #ed683c;
+    }
+
+    .row10000i{
+        background-color: #e93e3a;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .row0 {
+        background-color: #121212;
+    }
+    
+    .row100 {
+        background-color: #12004e;
+    }
+    
+    .row500 {
+        background-color: #2f0872;
+    }
+    
+    .row1000{
+        background-color: #5100bb;
+    }
+    
+    .row5000{
+        background-color: #721bdd;
+    }
+    
+    .row10000{
+        background-color: #9045ce;
+    }
+    
+    .row10000i{
+        background-color: #a451bd;
+    }
+
+    .year:hover {
+        background-color: #121212;
+    }
+    
+    .table-heatmap tr:hover {
+        background-color: #121212;
+    }
+    
+    .legende tr:hover {
+        background-color: #121212;
+    }
+
+    tbody:hover {
+        background-color: #121212;
+    }
+}
+
+@media only screen and (max-width: 65em) {
+    table, tbody, tr {
+		display: block;
+	}
+	thead {
+		display: none;
+	}
+    tbody th {
+		display: block;
+	}
+    .year {
+        display: block;
+        text-align: center;
+        border: none;
+    }
+    .table-heatmap tr {
+        margin-top: 2em;
+    }
+	td {
+		display: inline-block;
+        justify-content: center;
+        height: 1.6em;
+        min-width: 28%;
+        max-width: max-content;
+        text-align: left;
+        padding-top: 0.8em;
+	}
+    td:nth-child(2)::before {
+        content: "Jan: ";
+    }
+    td:nth-child(3)::before {
+        content: "Feb: ";
+    }
+    td:nth-child(4)::before {
+        content: "Mar: ";
+    }
+    td:nth-child(5)::before {
+        content: "Apr: ";
+    }
+    td:nth-child(6)::before {
+        content: "May: ";
+    }
+    td:nth-child(7)::before {
+        content: "Jun: ";
+    }
+    td:nth-child(8)::before {
+        content: "Jul: ";
+    }
+    td:nth-child(9)::before {
+        content: "Aug: ";
+    }
+    td:nth-child(10)::before {
+        content: "Sep: ";
+    }
+    td:nth-child(11)::before {
+        content: "Oct: ";
+    }
+    td:nth-child(12)::before {
+        content: "Nov: ";
+    }
+    td:nth-child(13)::before {
+        content: "Dec: ";
+    }
+
+    .legende{
+        display: inline;
+        min-width: none;
+    }
+}

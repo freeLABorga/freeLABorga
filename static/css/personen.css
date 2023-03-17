@@ -1,0 +1,149 @@
+/**
+ * This file is part of freeLABorga.
+ * Copyright (C) 2022-2023  Nico Hoffmann, Jan Ludwig, Philipp Pfeiffer 
+ *
+ * freeLABorga is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License Version 3
+ * as published by the Free Software Foundation on June 29, 2007.
+ *
+ * freeLABorga is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with freeLABorga.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+.delete-place-button i {
+    color: var(--red-color);
+    padding: .5em;
+}
+
+.edit-place-button i {
+    color: var(--accent-color);
+    padding: .5em;
+}
+
+
+.delete-place-button i:hover,
+.edit-place-button i:hover {
+    background-color: var(--accent-hover-color);
+    border-radius: 0.25em;
+    cursor: pointer;
+}
+
+.add-button::before {
+    content: "\2b";
+    margin-right: .5em;
+}
+
+.delete-place-button {
+    width: 0;
+}
+
+.edit-place-button {
+    width: 0;
+}
+
+::selection {
+    background-color: var(--accent-hover-color);
+    color: white;
+}
+
+
+@media screen and (max-width: 45em) {
+
+    table,
+    tbody,
+    tr {
+        display: block;
+    }
+
+    thead {
+        display: none;
+    }
+
+    tr:first-child {
+        margin-top: 1em;
+        border-top: medium solid var(--accent-hover-color);
+    }
+
+    tr {
+        border-bottom: medium solid var(--accent-hover-color);
+        padding: .5em 2em;
+    }
+
+    td:nth-child(2)::before {
+        content: ", ";
+    }
+
+    td:nth-child(3)::before {
+        content: "Matr-Nr: ";
+    }
+
+    td:nth-child(4)::before {
+        content: "E-Mail: ";
+    }
+
+    td.paid+td::before {
+        content: "Zahlungseingang: ";
+    }
+
+    tbody th {
+        display: block;
+        font-weight: bold;
+    }
+
+    th a {
+        font-weight: normal;
+    }
+
+    td {
+        display: inline-block;
+        /* min-width: 30%; */
+        padding: .2em 0;
+        text-align: left;
+        border: none;
+        height: auto;
+    }
+
+    td:nth-child(3),
+    td:nth-child(4) {
+        display: block;
+    }
+
+    td:nth-child(1),
+    td:nth-child(2) {
+        font-weight: bold;
+    }
+
+    td:nth-child(5),
+    td:nth-child(6) {
+        display: inline-block;
+        width: fit-content;
+        /* margin-right: 1em */
+        width: 50%;
+        text-align: center;
+    }
+    
+    td:nth-child(5) i,
+    td:nth-child(6) i {
+        font-size: larger;
+        width: 80%;
+    }
+
+
+
+
+}
+
+@media screen and (max-width: 33em) {
+    td {
+        /* display: block; */
+    }
+
+    tr {
+        padding: .5em;
+    }
+}

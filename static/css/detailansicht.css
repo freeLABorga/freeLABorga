@@ -1,0 +1,254 @@
+/**
+ * This file is part of freeLABorga.
+ * Copyright (C) 2022-2023  Nico Hoffmann, Jan Ludwig, Philipp Pfeiffer 
+ *
+ * freeLABorga is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License Version 3
+ * as published by the Free Software Foundation on June 29, 2007.
+ *
+ * freeLABorga is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with freeLABorga.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+.headlinebuttons{
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttons{
+    padding: 0;
+    list-style: none;
+    display: inline;
+    margin: 1em;
+    margin-right: 4em;
+}
+
+.Ausleihhistorie th{
+    height: 2em;
+    padding-right: 0.5em;
+    padding-left: 0.5em;
+}
+
+.Ausleihhistorie tbody td {
+    border-top: 0.1px solid grey;
+    height: 2.5em;
+    padding-left: 0.5em;
+    padding-right: 1em;
+}
+
+.main-table tbody tr td:nth-child(1) {
+    width: 10em;
+}
+
+.main-table td {
+    text-align: left;
+    height: 2.5em;
+    padding-left: 1em;
+}
+
+.cat-item,
+button,
+input[type="button"] {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    background-color: var(--accent-color);
+    margin: .1em;
+    padding: .25em;
+    border-width: 0;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+    font-family: Roboto, sans-serif;
+}
+
+input[type="button"],
+button {
+    cursor: pointer;
+    padding: .5em;
+    min-width: 3em;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+.row {
+    display: flex;
+}
+
+.column {
+    flex: 50%;
+    padding: 1em;
+}
+
+.Ausleihhistorie {
+    border-left: solid grey;
+}
+
+.Zustandshistorie {
+    border-top: solid grey;
+    margin-top: 2em;
+}
+
+.notInv {
+    color: darkgray;
+}
+
+.popup-content p{
+    width: 25em;
+    text-align: right;
+}
+
+.popup-content p label input[type="date"], input[type="checkbox"]{
+    width: 18em;
+}
+
+@media only screen and (max-width: 65em) {
+    .row {
+        display: inline;
+    }
+
+    .Ausleihhistorie {
+        border-left: none;
+        border-top: solid gray;
+    }
+}
+
+@media only screen and (max-width: 45em) {
+    .headlinebuttons {
+        display: inline;
+    }
+    .buttons {
+        display: block;
+    }
+    .cat-item {
+        font-size: small;
+    }
+    table, tbody, tr {
+		display: block;
+	}
+	tbody th {
+		display: block;
+		font-weight: bold;
+	}
+	th a {
+		font-weight: normal;
+	}
+	td {
+		display: block;
+		min-width: 30%;
+		padding: .2em 2em;
+		text-align: left;
+	}
+	td:nth-child(3) {
+		text-align: left;
+	}
+
+    .main-table td:nth-child(1){
+        display: none;
+    }
+    .main-table tr:nth-child(1) td:nth-child(2)::before{
+        content: "Name: ";
+    }
+    .main-table tr:nth-child(2) td:nth-child(2)::before{
+        content: "Lagerort: ";
+    }
+    .main-table tr:nth-child(3) td:nth-child(2)::before{
+        content: "Kategorien: ";
+    }
+    .main-table tr:nth-child(4) td:nth-child(2)::before{
+        content: "ID: ";
+    }
+    .main-table tr:nth-child(5) td:nth-child(2)::before{
+        content: "SN: ";
+    }
+    .main-table tr:nth-child(6) td:nth-child(2)::before{
+        content: "Verfügbar: ";
+    }
+    .main-table tr:nth-child(7) td:nth-child(2)::before{
+        content: "Inventarisiert: ";
+    }
+    .main-table tr:nth-child(8) td:nth-child(2)::before{
+        content: "Kaufpreis: ";
+    }
+    .main-table tr:nth-child(9) td:nth-child(2)::before{
+        content: "Kaufdatum: ";
+    }
+    .main-table tr:nth-child(10) td:nth-child(2)::before{
+        content: "Zustand: ";
+    }
+
+    .Ausleihhistorie th{
+        display: none;
+    }
+    .Ausleihhistorie tr{
+        padding: .5em 0em 1em;
+    }
+    .Ausleihhistorie tr:first-child {
+        border-top: none;
+    }
+    .Ausleihhistorie tr td:nth-child(1)::before {
+        content: "Ausgeliehen von: ";
+    }
+    .Ausleihhistorie tr td:nth-child(2)::before {
+        content: "Verleihdatum: ";
+    }
+    .Ausleihhistorie tr td:nth-child(3)::before {
+        content: "gepl. Rückgabe: ";
+    }
+    .Ausleihhistorie tr td:nth-child(4)::before {
+        content: "tats. Rückgabe: ";
+    }
+
+    .Zustandshistorie tr {
+        padding: 1.5em 0em 1em;
+    }
+    .Zustandshistorie th:nth-child(1){
+        display: none;
+    }
+    .Zustandshistorie th:nth-child(2){
+        display: none;
+    }
+    .Zustandshistorie th:nth-child(3){
+        display: none;
+    }
+    .Zustandshistorie th:nth-child(4)::before{
+        content: "Neue Beschädigung erstellen ";
+    }
+    .Zustandshistorie tr td:nth-child(1)::before {
+        content: "Datum: ";
+    }
+    .Zustandshistorie tr td:nth-child(2)::before {
+        content: "Beschreibung: ";
+    }
+    .Zustandshistorie tr td:nth-child(3)::before {
+        content: "Behoben: ";
+    }
+    .Zustandshistorie tr td:nth-child(4)::before {
+        content: "Bearbeiten ";
+    }
+    .Zustandshistorie tr td:nth-child(5)::before {
+        content: "Löschen ";
+    }
+
+    
+}
+
+@media screen and (max-width: 33em) {
+	td {
+		display: block;
+	}
+	/*Reduce input field size for mobile:*/
+	.popup-content p{
+		width: 4em;
+		text-align: left
+	}
+	.popup-content p label input{
+		height: 0.6em;
+	}
+}

@@ -1,0 +1,120 @@
+{#
+    This file is part of freeLABorga.
+    Copyright (C) 2022-2023  Nico Hoffmann, Jan Ludwig, Philipp Pfeiffer 
+
+    freeLABorga is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License Version 3
+    as published by the Free Software Foundation on June 29, 2007.
+
+    freeLABorga is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with freeLABorga.  If not, see <http://www.gnu.org/licenses/>.
+#}
+
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="rgb(0, 161, 242)" />
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="rgb(0, 161, 242)" />
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/fontawesome/css/all.css">
+    <!-- <script language="javascript" type="text/javascript" src="js/load_header_footer.js" async></script> -->
+    <script language="javascript" type="text/javascript" src="/js/script.js" async></script>
+    <script language="javascript" type="text/javascript" src="/js/popup.js" async></script>
+    {% block head %}
+    {% endblock head %}
+    <!-- <title>Laborgegenstände</title> -->
+</head>
+
+<body>
+    <header>
+        <div class="popup" id="confirmation-popup">
+            <div class="popup-head">
+                <h3>Platzhalterüberschrift</h3>
+                <i id="confirmation-popup-close" class="fa-solid fa-xmark"></i>
+            </div>
+            <div class="popup-content">
+            </div>
+
+            <div id="pupup-confirm-buttons">
+                <button class="button-yes">JA</button>
+                <button class="button-no">NEIN</button>
+            </div>
+        </div>
+        <i id="menu-button" class="fa-solid fa-bars"></i>
+        <i id="mobile-search-button" class="fa-solid fa-magnifying-glass"></i>
+        <div id="header-title">
+            <a href="/index.html">
+                Labor-Verwaltung
+            </a>
+        </div>
+        <div id="search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input id="search-input" type="search" placeholder="Suche...">
+            <i class="fa-solid fa-arrow-right" id="button-search"></i>
+            <div id="search-popup" class="popup">
+                <div class="search-things-persons">
+                    <div>
+                        <div class="search-popup-section-headline">
+                            <h3>Gegenstände</h3>
+                            <button id="things-search">Gegenstände Volltextsuche</button>
+                        </div>
+                        <ul id="things-suggestion-list">
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="search-popup-section-headline">
+                            <h3>Personen</h3>
+                            <button id="persons-search">Personen Volltextsuche</button>
+                        </div>
+                        <ul id="persons-suggestion-list">
+                        </ul>
+                    </div>
+                </div>
+                <div id="category-filter">
+                    <h3>Kategorien</h3>
+                </div>
+                <div id="place-filter">
+                    <h3>Lagerplätze</h3>
+                </div>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#">Inventar</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/gegenstaende.html">Gegenstände</a></li>
+                        <li><a href="/lagerplaetze.html">Lagerplätze</a></li>
+                    </ul>
+                </li>
+                <li><a href="/heatmap.html">Heatmap</a></li>
+                <li><a href="/personen.html">Personen</a></li>
+                <li><a href="/admin.html">Admin-Bereich</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="overlay"></div>
+
+    {% block content %}
+    {% endblock content %}
+
+    <footer>
+        <p class="left-footer">Programmieren III WS 2022/23</p>
+        <div class="right-footer">
+            <ul>
+                <li><a href="/impressum.html">Impressum</a></li>
+                <li><a href="/datenschutz.html">Datenschutz</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+
+</html>

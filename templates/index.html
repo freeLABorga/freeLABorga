@@ -1,0 +1,50 @@
+{#
+    This file is part of freeLABorga.
+    Copyright (C) 2022-2023  Nico Hoffmann, Jan Ludwig, Philipp Pfeiffer 
+
+    freeLABorga is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License Version 3
+    as published by the Free Software Foundation on June 29, 2007.
+
+    freeLABorga is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with freeLABorga.  If not, see <http://www.gnu.org/licenses/>.
+#}
+
+{% extends "base.html" %}
+
+{% block head %}
+<link rel="stylesheet" href="css/index.css">
+<script language="javascript" type="module" src="js/index.js" async></script>
+<title>Labor-Verwaltung</title>
+{% endblock head %}
+
+{% block content %}
+<main>
+    <div class="content">
+        <div class="headline">
+            <h1>Laborgegenstände Übersicht</h1>
+        </div>
+        <table id="main-table">
+            <thead>
+                <th>Name</th>
+                <th>Kategorien</th>
+                <th>Anzahl</th>
+                <th>Verfügbar</th>
+                <th>Verfügbar</th>
+            </thead>
+
+            <tbody>
+
+            </tbody>
+        </table>
+        <div class="pagination">
+
+        </div>
+    </div>
+</main>
+{% endblock content %}

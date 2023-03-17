@@ -1,0 +1,41 @@
+# This file is part of freeLABorga.
+# Copyright (C) 2022-2023  Nico Hoffmann, Jan Ludwig, Philipp Pfeiffer 
+#
+# freeLABorga is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License Version 3
+# as published by the Free Software Foundation on June 29, 2007.
+#
+# freeLABorga is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with freeLABorga.  If not, see <http://www.gnu.org/licenses/>.
+
+[package]
+name = "laborverwaltung"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+
+# Web-Server
+actix-web = "4"
+actix-files = "0.6.2"
+actix-http = "3"
+tera = { version = "1", default-features = false }
+env_logger = "0.10.0"
+serde = { version = "1.0", features = ["derive"] }
+
+# Database
+rusqlite = { version = "0.28.0", features = ["bundled"] }
+r2d2 = "0.8.10"
+r2d2_sqlite = "0.21.0"
+
+# Other
+regex = "1"
+chrono = "0.4"
+local-ip-address = "0.5.1"

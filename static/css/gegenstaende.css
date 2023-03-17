@@ -1,0 +1,157 @@
+/**
+ * This file is part of freeLABorga.
+ * Copyright (C) 2022-2023  Nico Hoffmann, Jan Ludwig, Philipp Pfeiffer 
+ *
+ * freeLABorga is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License Version 3
+ * as published by the Free Software Foundation on June 29, 2007.
+ *
+ * freeLABorga is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with freeLABorga.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+
+td .fa-check{
+    color: green;
+}
+
+td .fa-xmark{
+    color: red;
+}
+
+.detail-view a {
+    color: var(--accent-color);
+}
+
+.bold{
+    font-weight: bolder;
+}
+.popup-content p{
+    width: 25em;
+    text-align: right;
+}
+
+.popup-content p label input[type="date"]{
+    width: 19em;
+}
+
+#button-takeback::before {
+    content: "\f2ea";
+    font: var(--fa-font-solid);
+    padding-right: 0.3em;
+}
+
+#button-borrow::before {
+    content: "\e09a";
+    font: var(--fa-font-solid);
+    padding-right: 0.3em;
+}
+
+@media (prefers-color-scheme: light) {
+	.notInventoried {
+		color: gray !important;
+		background-color: lightgray !important;
+	}
+	
+	.notInventoried:hover {
+		cursor: default !important;
+		color: gray !important;
+		background-color: lightgray !important;
+	}
+	
+	.notInventoried button:hover {
+		cursor: default;
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+	.notInventoried {
+		color: darkgray !important;
+		background-color: dimgray !important;
+	}
+	
+	.notInventoried:hover {
+		cursor: default !important;
+		color: darkgray !important;
+		background-color:dimgrey !important;
+	}
+}
+
+@media only screen and (max-width: 45em) {
+    /*Bei der mobile Ansicht sollen die Zeilen untereinander angezeigt werden*/
+    /*.cat-item {
+        font-size: small;
+    }*/
+    table, tbody, tr {
+		display: block;
+	}
+	thead {
+		display: none;
+	}
+	tr:first-child {
+		margin-top: 1em;
+        border-top: medium solid var(--accent-hover-color);
+	}
+	tr {
+		border-bottom: medium solid var(--accent-hover-color);
+        padding: .5em 2em;
+	}
+	td:nth-child(1)::before {
+		content: "Name: ";
+	}
+	td:nth-child(2)::before {
+		content: "Kategorien: ";
+	}
+	td:nth-child(3)::before {
+		content: "Id: ";
+	}
+	td:nth-child(4)::before {
+		content: "frei?: ";
+	}
+	td:nth-child(5)::before {
+		content: "Details: ";
+	}
+	tbody th {
+		display: block;
+		font-weight: bold;
+	}
+	th a {
+		font-weight: normal;
+	}
+	td {
+		display: inline-block;
+		/*min-width: 30%;*/
+		padding: .2em 0;
+		text-align: left;
+		border: none;
+		height: auto
+	}
+	td:nth-child(3) {
+		text-align: left;
+	}
+
+	
+    
+}
+
+@media screen and (max-width: 33em) {
+	td {
+		display: block;
+	}
+	tr {
+		padding: .5em .5em 1em;
+	}
+	/*Reduce input field size for mobile:*/
+	.popup-content p{
+		width: 4em;
+		text-align: left;
+	}
+	.popup-content p label input{
+		height: 0.6em;
+	}
+}
